@@ -14,7 +14,7 @@ change :: Event -> State -> State
 change event state = state
 
 initial :: Double -> State
-initial random = pack (show random)
+initial random = randomMove random ["R", "P", "S"]
 
 main :: IO ()
 main = do
