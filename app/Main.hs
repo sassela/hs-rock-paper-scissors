@@ -17,7 +17,8 @@ picture "S"   = lettering startingMessage
 picture state = lettering state
 
 change :: Event -> State -> State
-change (KeyPress "R") state = "Player move: Rock"
+change (KeyPress "R") "S" = "Rock beats Scissors. You win!"
+change (KeyPress "R") "P" = "Paper beats Rock. Computer wins!"
 change (KeyPress "P") state = "Player move: Paper"
 change (KeyPress "S") state = "Player move: Scissors"
 change event state =
