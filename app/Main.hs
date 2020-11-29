@@ -5,14 +5,18 @@ import           Data.Text (Text, pack)
 import           Lib (randomMove)
 import           System.Random (Random (randomIO))
 
-picture :: Text -> Picture
+type State = Text
+
+picture :: State -> Picture
 picture state = lettering state
 
-change :: Event -> Text -> Text
+change :: Event -> State -> State
 change event state = state
 
-initial :: Double -> Text
+initial :: Double -> State
 initial random = pack (show random)
 
 main :: IO ()
-main = activityOf (initial 0) change picture
+main = do
+  random <- randomIO :: IO Double
+  activityOf (initial random) change picture
