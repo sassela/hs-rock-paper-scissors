@@ -17,7 +17,8 @@ picture "S"   = lettering startingMessage
 picture state = lettering state
 
 change :: Event -> State -> State
-change event state = state
+change (KeyPress "R") state = "Player move: Rock"
+change event state          = state
 
 initial :: Double -> State
 initial random = randomMove random ["R", "P", "S"]
