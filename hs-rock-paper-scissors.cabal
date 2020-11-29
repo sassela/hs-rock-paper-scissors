@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 01db001c3135cc6ab7ae099a1b23b46291d7288594e93d8a8e0b3921234bbc92
+-- hash: 1b62392bfaa4164553a09fabd5322c59b0fda51dd091f4345717af1511dc3972
 
 name:           hs-rock-paper-scissors
 version:        0.1.0.0
@@ -42,6 +42,8 @@ library
 executable hs-rock-paper-scissors-exe
   main-is: Main.hs
   other-modules:
+      Completed
+      Starter
       Paths_hs_rock_paper_scissors
   hs-source-dirs:
       app
