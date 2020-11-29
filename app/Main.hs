@@ -12,6 +12,8 @@ startingMessage = "Rock, Paper or Scissors?"
 
 picture :: State -> Picture
 picture "R"   = lettering startingMessage
+picture "P"   = lettering startingMessage
+picture "S"   = lettering startingMessage
 picture state = lettering state
 
 change :: Event -> State -> State
