@@ -18,6 +18,8 @@ picture state = lettering state
 
 change :: Event -> State -> State
 change (KeyPress "R") state = "Player move: Rock"
+change (KeyPress "P") state = "Player move: Paper"
+change (KeyPress "S") state = "Player move: Scissors"
 change event state          = state
 
 initial :: Double -> State
