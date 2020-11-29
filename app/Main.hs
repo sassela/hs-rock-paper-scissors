@@ -20,7 +20,10 @@ change :: Event -> State -> State
 change (KeyPress "R") state = "Player move: Rock"
 change (KeyPress "P") state = "Player move: Paper"
 change (KeyPress "S") state = "Player move: Scissors"
-change event state          = state
+change event state =
+  if event == KeyPress state
+    then "DRAW!"
+    else state
 
 initial :: Double -> State
 initial random = randomMove random ["R", "P", "S"]
