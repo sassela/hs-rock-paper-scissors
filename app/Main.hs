@@ -15,4 +15,4 @@ initial :: Double -> Text
 initial random = pack (show random)
 
 main :: IO ()
-main = drawingOf codeWorldLogo
+main = activityOf (initial 0) change picture
