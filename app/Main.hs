@@ -7,7 +7,11 @@ import           System.Random (Random (randomIO))
 
 type State = Text
 
+startingMessage :: State
+startingMessage = "Rock, Paper or Scissors?"
+
 picture :: State -> Picture
+picture "R"   = lettering startingMessage
 picture state = lettering state
 
 change :: Event -> State -> State
