@@ -19,8 +19,10 @@ picture state = lettering state
 change :: Event -> State -> State
 change (KeyPress "R") "S" = "Rock beats Scissors. You win!"
 change (KeyPress "R") "P" = "Paper beats Rock. Computer wins!"
-change (KeyPress "P") state = "Player move: Paper"
-change (KeyPress "S") state = "Player move: Scissors"
+change (KeyPress "P") "R" = "Paper beats Rock. You win!"
+change (KeyPress "P") "S" = "Scissors beats Paper. Computer wins!"
+change (KeyPress "S") "P" = "Scissors beats Paper. You win!"
+change (KeyPress "S") "R" = "Rock beats Scissors. Computer wins!"
 change event state =
   if event == KeyPress state
     then "DRAW!"
