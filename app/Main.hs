@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import           CodeWorld
+import           CodeWorld (Event (KeyPress), Picture, activityOf, lettering)
 import           Data.Text (Text, pack)
 import           Lib (randomMove)
 import           System.Random (Random (randomIO))

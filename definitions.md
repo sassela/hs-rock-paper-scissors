@@ -1,0 +1,8 @@
+- First-class: functions can be passed as arguments to other functions, returned as the values from other functions or assigned to variables.
+- Function: a relationship that associates each possible argument (input) with a specific result (output).
+- Pattern matching: the act of checking a given sequence of characters, data or tokens for the presence of some pattern.
+- State: describes "the way things are right now". For example, the state of a light switch is on or off.
+- Type signature: defines the inputs and outputs for a function.
+- Type synonym: a new name for an existing type. Type synonyms are used to make type signatures more self-descriptive and code more readable to humans.
+- Type: in Haskell, types are how you describe the data your program will work with. For example, `1.0` has the type `Double`.
+- Variable: the name given to a value or expression. For example, in the expression `x = 1`, `x` is the variable.
